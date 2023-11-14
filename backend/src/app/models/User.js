@@ -4,7 +4,7 @@ const mongooseDelete = require('mongoose-delete');
 const MongooseDelete = require('mongoose-delete');
 
 const Schema = mongoose.Schema;
-const User = new Schema(
+const User = new Schema( 
     {
         firstName: String,
         lastName: String,
@@ -12,6 +12,7 @@ const User = new Schema(
         password: String,
         slug: { type: String, slug: 'name', unique: true },
     },
+    
     {
         timestamps: true,
     },
