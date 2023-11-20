@@ -27,7 +27,7 @@ export default function Header() {
           />
         </svg>
         <span className="font-bold text-2xl text-primary hidden md:flex">
-          StayEasy
+          GoBooking
         </span>
       </Link>
       <form

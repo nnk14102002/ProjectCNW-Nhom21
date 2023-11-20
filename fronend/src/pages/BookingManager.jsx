@@ -1,3 +1,4 @@
+import AccountNav from "../AccountNav";
 import { useEffect, useState } from "react";
 import axios from "axios";
 export default function BookingManager() {
@@ -20,6 +21,7 @@ export default function BookingManager() {
 
   return (
     <div className="">
+      <AccountNav />
       {bookings.length === 0 && (
         <h1 className="text-center text-3xl font-semibold my-20">
           You don&apos;t have any booking !!!
