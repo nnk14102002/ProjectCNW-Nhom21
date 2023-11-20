@@ -95,7 +95,7 @@ class PlaceController {
         res.json(await Place.findById(id));
     }
 
-    //[DELETE] /places/:id 
+    //[DELETE] /places/:id
     async deletePlace(req, res) {
         const { id } = req.params;
         await Place.findByIdAndDelete(id);

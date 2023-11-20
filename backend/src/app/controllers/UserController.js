@@ -2,10 +2,9 @@
 const { multipleMongooseToObject } = require('../../util/mongoose');
 const { mongooseToObject } = require('../../util/mongoose');
 
-
 class UserController {
-     //[Get] /news
-    index(req, res, next) {  
+    /* //[Get] /news
+    index(req, res, next) {
         Course.find({})
             .then((courses) => {
                 res.render('home', {
@@ -23,7 +22,7 @@ class UserController {
         
         let params = []
         params.name = req.query.name
-    } 
+    } */
 }
 
 module.exports = new UserController();

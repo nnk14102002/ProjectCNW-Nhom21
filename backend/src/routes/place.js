@@ -9,6 +9,6 @@ router.get('/', placeController.getAllPlaces);
 router.get('/find/:query', placeController.queryPlace);
 router.get('/:id', placeController.getPlaceID);
 router.delete('/:id', placeController.deletePlace);
-//router.get('/', placeController.storedCourses); 
+//router.get('/', placeController.storedCourses);
 
 module.exports = router;
