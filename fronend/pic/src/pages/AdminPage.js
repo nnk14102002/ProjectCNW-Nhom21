@@ -169,7 +169,18 @@ export default function AdminPage() {
                   </ListGroup.Item>
                 ))}
               </ListGroup>
-              <div>
+              <div>ort ChatBox from '../components/ChatBox';
+export default function HomePage() {
+  return (
+    <div className="justify-content-center">
+      <h1 className="content-h1">Home Page</h1>
+      <div className="flex">
+        <div className="content-h2">Your Content</div>
+      </div>
+      <ChatBox />
+    </div>
+  );
+}
                 <form onSubmit={submitHandler}>
                   <InputGroup className="col-6">
                     <FormControl
@@ -189,5 +200,27 @@ export default function AdminPage() {
         </div>
       </Col>
     </Row>
-  );
+  );ort ChatBox from '../components/ChatBox';
+  export default function HomePage() {
+    return (
+      <div className="justify-content-center">
+        <h1 className="content-h1">Home Page</h1>
+        <div className="flex">
+          <div className="content-h2">Your Content</div>
+        </div>
+        <ChatBox />
+      </div>
+    );
+  }ort ChatBox from '../components/ChatBox';
+  export default function HomePage() {
+    return (
+      <div className="justify-content-center">
+        <h1 className="content-h1">Home Page</h1>
+        <div className="flex">
+          <div className="content-h2">Your Content</div>
+        </div>
+        <ChatBox />
+      </div>
+    );
+  }
 }
