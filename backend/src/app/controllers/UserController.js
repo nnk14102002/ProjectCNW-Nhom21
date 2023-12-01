@@ -2,9 +2,10 @@
 const { multipleMongooseToObject } = require('../../util/mongoose');
 const { mongooseToObject } = require('../../util/mongoose');
 
+
 class UserController {
      //[Get] /news
-    index(req, res, next) {
+    index(req, res, next) {  
         Course.find({})
             .then((courses) => {
                 res.render('home', {
