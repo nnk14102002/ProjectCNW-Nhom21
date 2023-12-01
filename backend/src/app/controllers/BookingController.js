@@ -61,7 +61,7 @@ class BookingController {
     async bookingManager(req, res) {
         const { token } = req.cookies;
         jwt.verify(token, jwtSecret, {}, async (err, userData) => {
-            if (err) {
+            if (err) {  
                 throw err;
             }
             const ownerId = userData.id;
