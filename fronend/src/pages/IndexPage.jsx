@@ -15,7 +15,7 @@ export default function IndexPage() {
     <div className="mx-10 lg:mx-16 -mt-5">
       <div
         style={{
-          backgroundImage: `url("https://blog.japanwondertravel.com/wp-content/uploads/2020/03/shibuya-sky-1200x836.jpg")`,
+          backgroundImage: `url("https://file1.dangcongsan.vn/data/0/images/2023/04/19/upload_4752/5.jpg")`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -23,20 +23,20 @@ export default function IndexPage() {
         className="rounded-3xl shadow-lg text-center py-36 mt-5 px-3"
       >
         <h1 className="text-5xl font-bold text-white pb-2">
-          Book your stay with StayEasy
+          Hãy đến với Go Booking
         </h1>
         <h2 className="text-2xl text-white opacity-90">
-          1,480,000 rooms around the world are waiting for you!
+          Hơn 2.000.000 homestays tuyệt vời đang chờ đợi bạn!
         </h2>
       </div>
       <div className="mt-5">
-        <h1 className="text-2xl font-semibold">Popular destinations</h1>
+        <h1 className="text-2xl font-semibold">Địa điểm nổi tiếng</h1>
         <div className="grid md:grid-cols-4 grid-cols-2 mt-5 gap-6">
           <Link
             to={"/find/Ha noi"}
             className="rounded-3xl shadow-lg"
             style={{
-              backgroundImage: `url("https://vcdn1-dulich.vnecdn.net/2022/05/11/hoan-kiem-lake-7673-1613972680-1508-1652253984.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=2wB1cBTUcNKuk68nrG6LMQ")`,
+              backgroundImage: `url("https://media.istockphoto.com/id/478073811/vi/anh/l%E1%BB%91i-v%C3%A0o-%C4%91%E1%BA%B9p-t%E1%BA%A1i-v%C4%83n-mi%E1%BA%BFu-qu%E1%BB%91c-t%E1%BB%AD-gi%C3%A1m.jpg?s=612x612&w=0&k=20&c=FXgEWvQQLlDi9iP8tacv4_QbnjyaAGWlT2Pij_awKTc=")`,
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
@@ -52,7 +52,7 @@ export default function IndexPage() {
             <div
               className="rounded-3xl shadow-lg"
               style={{
-                backgroundImage: `url("https://statics.vinpearl.com/nha-trang-beaches-banner%20-%20Copy_1660569595.jpg")`,
+                backgroundImage: `url("https://static.vinwonders.com/production/nha-trang-o-dau-1.jpg")`,
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
@@ -78,7 +78,7 @@ export default function IndexPage() {
             >
               <Link to="/find/Ho Chi Minh" className="pt-28 flex pb-3 pl-3">
                 <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-50 font-medium">
-                  Ho Chi Minh city
+                  TP Ho Chi Minh
                 </h1>
               </Link>
             </div>
@@ -134,7 +134,7 @@ export default function IndexPage() {
         </div>
       </div>
       <div className="mt-5">
-        <h1 className="text-2xl font-semibold">Hotels loved by guests</h1>
+        <h1 className="text-2xl font-semibold">Địa điểm được yêu thích</h1>
         <div className="mt-6 grid gap-x-4 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           {places.length > 0 &&
             places.map((doc) => (
@@ -182,7 +182,7 @@ export default function IndexPage() {
             ))}
         </div>
         <Link to="/all" className="flex float-right my-5 cursor-pointer ">
-          <h1 className="pr-1 hover:underline">See all hotels</h1>
+          <h1 className="pr-1 hover:underline">Xem tất cả</h1>
           <span className="material-symbols-outlined">arrow_right_alt</span>
         </Link>
       </div>
