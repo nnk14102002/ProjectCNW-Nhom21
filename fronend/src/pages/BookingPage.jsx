@@ -27,7 +27,7 @@ export default function BookingPage() {
   }, [id]);
 
   if (!booking) {
-    return null; // Return null to render nothing until data is loaded
+    return "";
   }
 
   async function deleteBooking(ev) {
@@ -37,7 +37,6 @@ export default function BookingPage() {
     }
     setRedirect(true);
   }
-
   if (redirect) {
     return <Navigate to={"/account/bookings"} />;
   }
@@ -55,25 +54,23 @@ export default function BookingPage() {
 
   return (
     <div className="my-4 lg:mx-80 mx-10">
-      <h1 className="text-3xl font-semibold">{booking.place.title}</h1>
-      <AddressLink className="my-2 block text-gray-600">
-        {booking.place.address}
-      </AddressLink>
-      <div className="bg-gray-200 p-6 my-6 rounded-xl flex items-center justify-between">
+      <h1 className="text-3xl">{booking.place.title}</h1>
+      <AddressLink className="my-2 block">{booking.place.address}</AddressLink>
+      <div className="bg-gray-200 p-6 my-6 rounded-2xl flex items-center justify-between">
         <div>
-          <h2 className="text-xl mb-4 font-semibold">Your booking information:</h2>
+          <h2 className="text-2xl mb-4">Your booking information:</h2>
           <BookingDates booking={booking} />
         </div>
-        <div className="bg-primary p-6 text-white rounded-xl">
+        <div className="bg-primary p-6 text-white rounded-2xl">
           <div>Total price</div>
-          <div className="text-2xl">${booking.price}</div>
+          <div className="text-3xl">${booking.price}</div>
         </div>
       </div>
       <PlaceGallery place={booking.place} />
 
       <button
         onClick={deleteBooking}
-        className="mt-8 w-full bg-red-400 text-white mb-4 py-2 border rounded-xl text-xl font-semibold"
+        className=" mt-8 w-full bg-red-400 text-white mb-4 py-2 border rounded-xl text-xl font-semibold"
       >
         Cancel booking
       </button>
@@ -93,7 +90,7 @@ export default function BookingPage() {
         <Rate rating={rate} onRating={(rate) => setRate(rate)} />
         <button
           onClick={sendFeedback}
-          className="mt-5 w-full bg-primary hover:bg-blue-500 text-white mb-4 py-2 border rounded-xl text-xl font-semibold"
+          className=" mt-5 w-full bg-primary hover:bg-blue-500 text-white mb-4 py-2 border rounded-xl text-xl font-semibold"
         >
           Send feedback
         </button>
