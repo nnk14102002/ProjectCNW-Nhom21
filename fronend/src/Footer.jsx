@@ -10,7 +10,7 @@ export default function Footer() {
       </div>
       <div className="text-gray-500 text-right">
         <h1 className="font-semibold text-black">Contact us</h1>
-        <h1>Group 17</h1>
+        <h1>Group 21</h1>
         <h1>
           Web Technology and <br />
           E-services

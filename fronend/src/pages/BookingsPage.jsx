@@ -1,3 +1,4 @@
+import AccountNav from "../AccountNav";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -10,8 +11,10 @@ export default function BookingsPage() {
       setBookings(response.data);
     });
   }, []);
+
   return (
     <div className="lg:mx-60 mx-10">
+      <AccountNav />
       <div className="mb-8">
         {bookings?.length > 0 &&
           bookings.map((booking) => (

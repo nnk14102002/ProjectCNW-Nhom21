@@ -1,9 +1,10 @@
 import { useParams, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import AddressLink from "../AddressLink";
+import PlaceGallery from "../PlaceGallery";
 import BookingDates from "../BookingDates";
 import Rate from "../Rate";
-
 
 export default function BookingPage() {
   const { id } = useParams();
@@ -17,7 +18,6 @@ export default function BookingPage() {
     if (id) {
       axios.get("/bookings").then((response) => {
         const foundBooking = response.data.find(({ _id }) => _id === id);
-        
         if (foundBooking) {
           setBooking(foundBooking);
           setPlace(foundBooking.place);
@@ -37,10 +37,25 @@ export default function BookingPage() {
     }
     setRedirect(true);
   }
+  if (redirect) {
+    return <Navigate to={"/account/bookings"} />;
+  }
+
+  async function sendFeedback(ev) {
+    ev.preventDefault();
+    await axios.post("/feedback", {
+      place: place._id,
+      comment,
+      rate,
+    });
+    alert("Feedback successful.");
+    setRedirect(true);
+  }
 
   return (
     <div className="my-4 lg:mx-80 mx-10">
       <h1 className="text-3xl">{booking.place.title}</h1>
+      <AddressLink className="my-2 block">{booking.place.address}</AddressLink>
       <div className="bg-gray-200 p-6 my-6 rounded-2xl flex items-center justify-between">
         <div>
           <h2 className="text-2xl mb-4">Your booking information:</h2>
@@ -51,6 +66,7 @@ export default function BookingPage() {
           <div className="text-3xl">${booking.price}</div>
         </div>
       </div>
+      <PlaceGallery place={booking.place} />
 
       <button
         onClick={deleteBooking}
@@ -72,6 +88,12 @@ export default function BookingPage() {
           How do you rate our hotel?
         </h1>
         <Rate rating={rate} onRating={(rate) => setRate(rate)} />
+        <button
+          onClick={sendFeedback}
+          className=" mt-5 w-full bg-primary hover:bg-blue-500 text-white mb-4 py-2 border rounded-xl text-xl font-semibold"
+        >
+          Send feedback
+        </button>
       </div>
     </div>
   );

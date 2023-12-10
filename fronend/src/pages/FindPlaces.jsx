@@ -41,7 +41,7 @@ export default function FindPlacePage() {
                   {!place.photos?.[0] && (
                     <img
                       className="rounded-2xl object-cover aspect-square"
-                      src=""
+                      src="https://kelembagaan.kemnaker.go.id/assets/img/no-image.svg"
                       alt=""
                     />
                   )}
