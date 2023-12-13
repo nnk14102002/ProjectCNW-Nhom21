@@ -24,7 +24,7 @@ const Place = new Schema(
     },
 );
 
-//add plugin.
+//add plugin
 mongoose.plugin(slug);
 Place.plugin(MongooseDelete, { deletedAt: true, overrideMethods: 'all' });
 
