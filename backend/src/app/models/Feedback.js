@@ -31,7 +31,7 @@ const Feedback = new Schema(
     },
 );
 
-//add plugin
+//add plugin.
 mongoose.plugin(slug);
 Feedback.plugin(MongooseDelete, { deletedAt: true, overrideMethods: 'all' });
 
