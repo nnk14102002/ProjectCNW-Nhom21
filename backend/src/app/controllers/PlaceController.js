@@ -7,7 +7,7 @@ const { multipleMongooseToObject } = require('../../util/mongoose');
 const { mongooseToObject } = require('../../util/mongoose');
 
 class PlaceController {
-    //[POST] /places.
+    //[POST] /places
     async uploadPlace(req, res) {
         const { token } = req.cookies;
         const {
