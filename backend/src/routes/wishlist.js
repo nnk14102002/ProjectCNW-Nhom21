@@ -7,4 +7,4 @@ router.get('/', WishlistController.getWishlist);
 router.put('/', WishlistController.putWishlist);
 router.post('/', WishlistController.wishlist);
 
-module.exports = router;
+module.exports = router; 
