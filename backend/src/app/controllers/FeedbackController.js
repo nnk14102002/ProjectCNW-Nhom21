@@ -6,7 +6,7 @@ const { mongooseToObject } = require('../../util/mongoose');
 const { NULL } = require('node-sass');
 
 class FeedbackController {
-    //[POST] /feedback
+    //[POST] /feedback.
     async postFeedback(req, res) {
         const { token } = req.cookies;
         const { place, comment, rate } = req.body;
