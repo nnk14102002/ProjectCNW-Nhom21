@@ -10,5 +10,5 @@ const feedbackController = require('../app/controllers/FeedbackController');
 //router.delete('/places/:id', feedbackController.deletePlace);
 router.get('/:id', feedbackController.getFeedback);
 router.post('/', feedbackController.postFeedback);
-
+ 
 module.exports = router;
